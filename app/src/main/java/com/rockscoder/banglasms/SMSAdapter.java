@@ -3,13 +3,11 @@ package com.rockscoder.banglasms;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog.Builder;
 import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +15,7 @@ import java.util.List;
 
 public class SMSAdapter extends Adapter<SMSAdapter.ViewHolder> {
     private Context context;
-    private List<ListItem> listItems;
+    private List<TextSMS> listItems;
 
     public class ViewHolder extends android.support.v7.widget.RecyclerView.ViewHolder {
         TextView desc;
@@ -40,7 +38,7 @@ public class SMSAdapter extends Adapter<SMSAdapter.ViewHolder> {
         }
     }
 
-    SMSAdapter(List<ListItem> listItems, Context context) {
+    SMSAdapter(List<TextSMS> listItems, Context context) {
         this.listItems = listItems;
         this.context = context;
     }
@@ -51,7 +49,7 @@ public class SMSAdapter extends Adapter<SMSAdapter.ViewHolder> {
     }
 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        ListItem listItem = (ListItem) this.listItems.get(position);
+        TextSMS listItem = (TextSMS) this.listItems.get(position);
         holder.desc.setText(listItem.getDesc());
     }
 

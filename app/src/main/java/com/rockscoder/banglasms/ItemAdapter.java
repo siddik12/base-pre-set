@@ -1,6 +1,7 @@
 package com.rockscoder.banglasms;
 
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView.Adapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,21 +11,25 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class MyAdapter extends Adapter<MyAdapter.ViewHolder> {
+public class ItemAdapter extends Adapter<ItemAdapter.ViewHolder> {
 
-    private List<ListItem> listItems;
+    private List<TextSMS> listItems;
     private final OnItemClickListener listener;
+
 
     public class ViewHolder extends android.support.v7.widget.RecyclerView.ViewHolder {
         TextView desc;
+        CardView cardView;
         ViewHolder(View itemView) {
             super(itemView);
             this.desc = itemView.findViewById(R.id.statusTextView);
+            this.cardView = itemView.findViewById(R.id.card_view);
         }
 
     }
 
-    MyAdapter(List<ListItem> listItems,OnItemClickListener listener) {
+
+    ItemAdapter(List<TextSMS> listItems, OnItemClickListener listener) {
         this.listItems = listItems;
         this.listener = listener;
     }
@@ -35,7 +40,10 @@ public class MyAdapter extends Adapter<MyAdapter.ViewHolder> {
     }
 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        final ListItem listItem = this.listItems.get(position);
+        final TextSMS listItem = this.listItems.get(position);
+
+
+
         holder.desc.setText(listItem.getDesc());
         holder.itemView.setOnClickListener(new OnClickListener() {
             @Override
@@ -51,7 +59,7 @@ public class MyAdapter extends Adapter<MyAdapter.ViewHolder> {
 
 
     public interface OnItemClickListener {
-        void onItemClick(ListItem listItem);
+        void onItemClick(TextSMS listItem);
     }
 
 

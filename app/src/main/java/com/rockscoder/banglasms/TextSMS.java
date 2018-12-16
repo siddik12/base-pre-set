@@ -1,9 +1,9 @@
 package com.rockscoder.banglasms;
 
-public class ListItem {
+class TextSMS {
     private String desc;
 
-    public ListItem(String desc) {
+    TextSMS(String desc) {
         this.desc = desc;
     }
 

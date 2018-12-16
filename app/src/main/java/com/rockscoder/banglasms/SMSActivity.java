@@ -4,12 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
 import java.util.ArrayList;
 
 public class SMSActivity extends AppCompatActivity {
-    ArrayList<ListItem> listItems = new ArrayList<>();
+    ArrayList<TextSMS> listItems = new ArrayList<>();
     String newString;
 
     @Override
@@ -70,21 +69,21 @@ public class SMSActivity extends AppCompatActivity {
     }
 
     public void love1() {
-        listItems.add(new ListItem("আমার চোখে জল আর তোমার ঠোটে হাসি,, তারপরও আমি তোমাকেই ভালবাসি..!!"));
+        listItems.add(new TextSMS("আমার চোখে জল আর তোমার ঠোটে হাসি,, তারপরও আমি তোমাকেই ভালবাসি..!!"));
     }
     public void love2() {
-        listItems.add(new ListItem("যদি বলো তোমার কথা মনে পড়ে কতবার?? আমি বলব চোখের পাতা নড়ে যতবার.. যদি বলো তোমায় ভালবাসি কত?? আমি বলব আকাশে তারা আছে যত..!!"));
+        listItems.add(new TextSMS("যদি বলো তোমার কথা মনে পড়ে কতবার?? আমি বলব চোখের পাতা নড়ে যতবার.. যদি বলো তোমায় ভালবাসি কত?? আমি বলব আকাশে তারা আছে যত..!!"));
     }
 
     public void love3() {
-        listItems.add(new ListItem("তুমি রাজি থাকলে প্রেম করবো, কাজী এনে বিয়া করব, রাগ করলে কিস করবো, দূরে গেলে মিস করবো, পাশে থাকলে আদর করবো, আর ভুলে গেলে খুব কষ্ট পাবো...!!"));
+        listItems.add(new TextSMS("তুমি রাজি থাকলে প্রেম করবো, কাজী এনে বিয়া করব, রাগ করলে কিস করবো, দূরে গেলে মিস করবো, পাশে থাকলে আদর করবো, আর ভুলে গেলে খুব কষ্ট পাবো...!!"));
     }
 
     public void love4() {
-        listItems.add(new ListItem("কেউ কেউ লাভ করে ,,,,,,,,,,, আবার কেউ করে ইনজয় ,,,,,,,,,, কেউ খাঁয় ছেকা,,,,,,,,, কেউ হয় একা,,,,,,,,, কেউ বলে জান,,,, কেউ করে বিষ পান.........., কারো মুখা হাসি............ । আবার কারো গলায় ফাঁসি । LOVE NOT FAN, So সাবধান, এখনকার মেয়েরা হয় বেইমান সার্থপর ।।। "));
+        listItems.add(new TextSMS("কেউ কেউ লাভ করে ,,,,,,,,,,, আবার কেউ করে ইনজয় ,,,,,,,,,, কেউ খাঁয় ছেকা,,,,,,,,, কেউ হয় একা,,,,,,,,, কেউ বলে জান,,,, কেউ করে বিষ পান.........., কারো মুখা হাসি............ । আবার কারো গলায় ফাঁসি । LOVE NOT FAN, So সাবধান, এখনকার মেয়েরা হয় বেইমান সার্থপর ।।। "));
 
     }
     public void sms() {
-        listItems.add(new ListItem(""));
+        listItems.add(new TextSMS(""));
     }
 }
